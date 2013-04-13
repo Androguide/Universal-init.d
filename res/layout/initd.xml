@@ -1,0 +1,134 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/mainTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="24dip"
+            android:fontFamily="sans-serif-thin"
+            android:gravity="center"
+            android:text="@string/subtitle"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#33b5e5"
+            android:textSize="26sp" />
+
+        <TextView
+            android:id="@+id/subTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="sans-serif-thin"
+            android:gravity="center"
+            android:text="@string/universal_initd"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <de.ankri.views.Switch
+            android:id="@+id/toggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dip"
+            android:showAsAction="always" />
+
+        <View
+            android:id="@+id/top_divider"
+            android:layout_width="match_parent"
+            android:layout_height="0.1dip"
+            android:layout_marginLeft="8dip"
+            android:layout_marginRight="8dip"
+            android:layout_marginTop="16dip"
+            android:background="#33b6ea" />
+
+        <TextView
+            android:id="@+id/manage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dip"
+            android:layout_marginTop="32dip"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/manage_scripts"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#33b6ea"
+            android:textSize="16sp" />
+
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dip"
+            android:layout_marginTop="16dip" />
+
+        <TextView
+            android:id="@+id/alreadyInitd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dip"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/already_initd"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#33b6ea"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/testInitd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dip"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/test_initd"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:weightSum="100" >
+
+            <Button
+                android:id="@+id/testButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="30"
+                android:clickable="true"
+                android:drawableStart="@drawable/ic_action_question"
+                android:onClick="onClick"
+                android:text="@string/test" />
+
+            <TextView
+                android:id="@+id/testValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="8dip"
+                android:layout_weight="70"
+                android:fontFamily="sans-serif-thin"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#33b6ea"
+                android:textSize="20sp" />
+        </LinearLayout>
+        
+        <View
+            android:id="@+id/invisible"
+            android:layout_width="match_parent"
+            android:layout_height="0.1dip"
+            android:visibility="invisible"
+            android:layout_marginTop="32dip" />
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Universal Init.d</string>
+    <string name="subtitle">Enjoy init.d support on any Rom &amp; any Kernel</string>
+    <string name="universal_initd">Welcome to the 1st truly universal init.d support tool.\nEnjoy automatic execution of scripts at each boot with any kernel!</string>
+	<string name="manage_scripts">Manage your init.d scripts :</string>
+	<string name="explaination">This app makes init.d support truly universal for the reason that everything happens on the app side, none of the hazardous system files modifications usually involved in adding init.d support to a device running a kernel lacking it are used here.\nIndeed, this application emulates the behaviour of the init.d support kernel feature by simply detecting when the device is rebooted, checking if you decided to enable init.d and execute all scripts in /system/etc/init.d if you did.\nVery simple &amp; efficient concept.\n In order to test if your kernel has init.d support, this app will generate a very simple script that creates a file on your internal storage. After a reboot it will detect if the file has indeed been created, if it does you already have init.d support.</string>
+	<string name="how_it_works">How This Works</string>
+	<string name="about">About&#8230;</string>
+	<string name="opensource">This App is Open Source!</string>
+	<string name="opensource_catchphrase">Come check-out this application\'s source code on github.\nFork it, improve it, use it in your own projects, do whatever you want with it!\n<i>If you liked this app, you can find it and many more like it in Pimp My Rom, free on Google Play.</i></string>
+	<string name="already_initd">Test if you already have init.d support</string>
+	<string name="test">Test</string>
+	<string name="test_not_started">Test Not Started</string>
+	<string name="test_negative">Your Kernel Does Not Have init.d Support</string>
+	<string name="test_positive">Your Kernel Has init.d Support</string>
+	<string name="test_reboot_required">Reboot Required</string>
+	<string name="turn_switch_off">Please Turn the Switch Off First!</string>
+	<string name="test_initd">To find out if your kernel has init.d support already built-in, turn off the switch at the top of this page, tap the button below and reboot, then come back here to find the answer.</string>
+</resources>
