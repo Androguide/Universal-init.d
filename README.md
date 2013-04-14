@@ -2,7 +2,7 @@ Universal-init.d
 ================
 
 ## A simple Android application which emulates the behavior of the init.d kernel mechanism
-**(automatic execution of the scripts contained within the /system/etc/init.d folder)**
+**(automatic execution of the scripts contained within the /system/etc/init.d folder at each boot)**
 
 What makes this method really universal is that everything happens on the app side, no system files modifications are required whatsoever. The tool basically emulates the behavior of the init.d kernel mechanism : it will detect whenever the device is rebooted and execute the scripts located in /system/etc/init.d.
 
