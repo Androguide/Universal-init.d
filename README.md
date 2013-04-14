@@ -18,11 +18,6 @@ This project depends on the following open source libraries :
 * **[NineOldAndroids] (http://nineoldandroids.com)** by Jake Wharton
 * **[JazzyViewPager] (https://github.com/jfeinstein10/JazzyViewPager)** by Jeremy Feinstein
 
-## Screenshots
-
-![Wireframe Galay nexus 1](http://168.144.134.166/screenshots/framed-initd1.jpg) ![Wireframe Galay nexus 2](http://168.144.134.166/screenshots/framed-initd2.jpg) ![Wireframe Galay nexus 3](http://168.144.134.166/screenshots/framed_initd3.jpg)
-![Wireframe Nexus 7 - 1](http://168.144.134.166/screenshots/framed-initd4.jpg) ![Wireframe Nexus 7 - 2](http://168.144.134.166/screenshots/framed-initd5.jpg) ![Wireframe Nexus 7 - 3](http://168.144.134.166/screenshots/framed-initd6.jpg)
-
 ## Contribute
 Clone the repo, make your changes then create a pull request. If your commit is accepted it will probably be merged in a future build of Pimp My Rom.
 
@@ -32,6 +27,8 @@ This app is a standalone version of the universal init.d support tool included i
 Find out more about Pimp My Rom at : [http://pimpmyrom.org](http://pimpmyrom.org)
 You can download Pimp My Rom for free on [Google Play](https://play.google.com/store/apps/details?id=com.androguide.pimp.my.rom)
 
+## Screenshots
 
-
+![Wireframe Galay nexus 1](http://168.144.134.166/screenshots/framed-initd1.jpg) ![Wireframe Galay nexus 2](http://168.144.134.166/screenshots/framed-initd2.jpg) ![Wireframe Galay nexus 3](http://168.144.134.166/screenshots/framed_initd3.jpg)
+![Wireframe Nexus 7 - 1](http://168.144.134.166/screenshots/framed-initd4.jpg) ![Wireframe Nexus 7 - 2](http://168.144.134.166/screenshots/framed-initd5.jpg) ![Wireframe Nexus 7 - 3](http://168.144.134.166/screenshots/framed-initd6.jpg)
 
