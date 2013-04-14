@@ -29,6 +29,5 @@ This app is a standalone version of the universal init.d support tool included i
 
 ## Screenshots
 
-![Wireframe Galay nexus 1](http://168.144.134.166/screenshots/framed-initd1.jpg) ![Wireframe Galay nexus 2](http://168.144.134.166/screenshots/framed-initd2.jpg) ![Wireframe Galay nexus 3](http://168.144.134.166/screenshots/framed_initd3.jpg)
-![Wireframe Nexus 7 - 1](http://168.144.134.166/screenshots/framed-initd4.jpg) ![Wireframe Nexus 7 - 2](http://168.144.134.166/screenshots/framed-initd5.jpg) ![Wireframe Nexus 7 - 3](http://168.144.134.166/screenshots/framed-initd6.jpg)
+![Wireframe Galay nexus 1](http://168.144.134.166/screenshots/framed-initd1.jpg)![Wireframe Galay nexus 2](http://168.144.134.166/screenshots/framed-initd2.jpg)![Wireframe Galay nexus 3](http://168.144.134.166/screenshots/framed_initd3.jpg)![Wireframe Nexus 7 - 1](http://168.144.134.166/screenshots/framed-initd4.jpg)![Wireframe Nexus 7 - 2](http://168.144.134.166/screenshots/framed-initd5.jpg)![Wireframe Nexus 7 - 3](http://168.144.134.166/screenshots/framed-initd6.jpg)
 
