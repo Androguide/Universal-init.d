@@ -24,8 +24,8 @@ Clone the repo, make your changes then create a pull request. If your commit is 
 ## Background
 This app is a standalone version of the universal init.d support tool included in Pimp My Rom from beta 1.0 onwards.
 
-Find out more about Pimp My Rom at : [http://pimpmyrom.org](http://pimpmyrom.org)
-You can download Pimp My Rom for free on [Google Play](https://play.google.com/store/apps/details?id=com.androguide.pimp.my.rom)
+* Find out more about **Pimp My Rom** at : [http://pimpmyrom.org](http://pimpmyrom.org)
+* You can download **Pimp My Rom** for free on [Google Play](https://play.google.com/store/apps/details?id=com.androguide.pimp.my.rom)
 
 ## Screenshots
 
