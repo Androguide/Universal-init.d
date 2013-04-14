@@ -1,3 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
+<resources>
 
-<color name="red">#c00</color>
+    <color name="test_red">#cb0000</color>
+    <color name="test_green">#679a00</color>
+    <color name="holo_blue">#ff33b5e5</color>
+    <color name="holoblue">#ff33b6ea</color>
+
+</resources>
