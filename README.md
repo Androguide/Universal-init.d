@@ -11,6 +11,8 @@ Basically, when you run the test, it will generate a little init.d script which 
 
 An additionnal functionnality to this tool is the ability to manage, edit, delete & run your init.d scripts with the touch of a button.
 
+**Download on Google Play : https://play.google.com/store/apps/details?id=com.androguide.universal.init.d**
+
 ## Dependencies
 This project depends on the following open source libraries :
 
