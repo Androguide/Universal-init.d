@@ -67,8 +67,7 @@ public class Initd extends SherlockFragment {
 		setHasOptionsMenu(true);
 
 		fa = super.getSherlockActivity();
-		ll = (ScrollView) inflater.inflate(R.layout.initd, container,
-				false);
+		ll = (ScrollView) inflater.inflate(R.layout.initd, container, false);
 
 		prefs = fa.getSharedPreferences("INITD_PREFS", 0);
 		toggle = (Switch) ll.findViewById(R.id.toggle);
@@ -114,6 +113,39 @@ public class Initd extends SherlockFragment {
 			}
 		});
 
+		File dir = new File("/system/etc/init.d");
+		CMDProcessor cmd = new CMDProcessor();
+
+		if (!dir.exists()) {
+
+			cmd.su.runWaitFor("mount -o remount,rw /system");
+			cmd.su.runWaitFor("mkdir /system/etc/init.d");
+			cmd.su.runWaitFor("chmod 755 /system/etc/init.d");
+			cmd.su.runWaitFor("echo \"no scripts found\" >> /system/etc/init.d/no");
+			cmd.su.runWaitFor("echo \"no scripts found\" >> /system/etc/init.d/scripts");
+			cmd.su.runWaitFor("echo \"no scripts found\" >> /system/etc/init.d/found");
+			cmd.su.runWaitFor("chmod 755 /system/etc/init.d/no");
+			cmd.su.runWaitFor("chmod 755 /system/etc/init.d/scripts");
+			cmd.su.runWaitFor("chmod 755 /system/etc/init.d/found");
+			cmd.su.runWaitFor("mount -o remount,ro /system");
+			cmd.su.runWaitFor("mount -o remount,ro /system");
+		}
+
+		File d = new File("/system/etc/init.d");
+		File[] file = d.listFiles();
+		
+		if (file.length == 0) {
+
+			cmd.su.runWaitFor("mount -o remount,rw /system");
+			cmd.su.runWaitFor("echo \"no scripts found\" >> /system/etc/init.d/no");
+			cmd.su.runWaitFor("echo \"no scripts found\" >> /system/etc/init.d/scripts");
+			cmd.su.runWaitFor("echo \"no scripts found\" >> /system/etc/init.d/found");
+			cmd.su.runWaitFor("chmod 755 /system/etc/init.d/no");
+			cmd.su.runWaitFor("chmod 755 /system/etc/init.d/scripts");
+			cmd.su.runWaitFor("chmod 755 /system/etc/init.d/found");
+			cmd.su.runWaitFor("mount -o remount,ro /system");
+		}
+
 		generateList();
 		adjustListViewHeight(listview);
 
@@ -123,39 +155,65 @@ public class Initd extends SherlockFragment {
 	private void generateList() {
 
 		File dir = new File("/system/etc/init.d");
-		File[] filelist = dir.listFiles();
-		scripts = new String[filelist.length];
-		for (int i = 0; i < scripts.length; i++) {
-			scripts[i] = filelist[i].getName();
-		}
+		File[] f = dir.listFiles();
 
-		listview = (ListView) ll.findViewById(R.id.listview);
+		if (!dir.exists()) {
 
-		final ArrayList<String> list = new ArrayList<String>();
-		for (int i = 0; i < scripts.length; ++i) {
-			list.add(scripts[i]);
-		}
+			CMDProcessor cmd = new CMDProcessor();
+			cmd.su.runWaitFor("mount -o remount,rw /system");
+			cmd.su.runWaitFor("mkdir /system/etc/init.d");
+			cmd.su.runWaitFor("chmod 755 /system/etc/init.d");
+			cmd.su.runWaitFor("mount -o remount,ro /system");
 
-		adapter = new StableArrayAdapter(fa,
-				android.R.layout.simple_list_item_1, list);
-		listview.setAdapter(adapter);
+		} else if (f.length == 0) {
 
-		listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+			CMDProcessor cmd = new CMDProcessor();
+			cmd.su.runWaitFor("mount -o remount,rw /system");
+			cmd.su.runWaitFor("echo \"no scripts found\" >> /system/etc/init.d/no");
+			cmd.su.runWaitFor("echo \"no scripts found\" >> /system/etc/init.d/scripts");
+			cmd.su.runWaitFor("echo \"no scripts found\" >> /system/etc/init.d/found");
+			cmd.su.runWaitFor("chmod 755 /system/etc/init.d/no");
+			cmd.su.runWaitFor("chmod 755 /system/etc/init.d/scripts");
+			cmd.su.runWaitFor("chmod 755 /system/etc/init.d/found");
+			cmd.su.runWaitFor("mount -o remount,ro /system");
 
-			@Override
-			public void onItemClick(AdapterView<?> parent, final View view,
-					int position, long id) {
+		} else {
 
-				pos = position;
-				v = view;
-
-				if (mActionMode != null) {
-
-				} else {
-					mActionMode = fa.startActionMode(mActionModeCallback);
-				}
+			File[] filelist = dir.listFiles();
+			scripts = new String[filelist.length];
+			Log.v("INITD", "number of scripts found : " + filelist.length);
+			for (int i = 0; i < scripts.length; i++) {
+				scripts[i] = filelist[i].getName();
 			}
-		});
+			listview = (ListView) ll.findViewById(R.id.listview);
+
+			final ArrayList<String> list = new ArrayList<String>();
+			for (int i = 0; i < scripts.length; ++i) {
+				list.add(scripts[i]);
+			}
+
+			adapter = new StableArrayAdapter(fa,
+					android.R.layout.simple_list_item_1, list);
+			listview.setAdapter(adapter);
+
+			listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+				@Override
+				public void onItemClick(AdapterView<?> parent, final View view,
+						int position, long id) {
+
+					pos = position;
+					v = view;
+
+					if (mActionMode != null) {
+
+					} else {
+						mActionMode = fa.startActionMode(mActionModeCallback);
+					}
+				}
+			});
+		}
+
 	}
 
 	private class StableArrayAdapter extends ArrayAdapter<String> {

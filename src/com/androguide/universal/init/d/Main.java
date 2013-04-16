@@ -144,6 +144,6 @@ public class Main extends SherlockFragmentActivity {
 
 	public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
 		inflater.inflate(R.menu.main, menu);
-	}
+ 	}
 
 }
