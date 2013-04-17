@@ -133,7 +133,7 @@ public class Initd extends SherlockFragment {
 
 		File d = new File("/system/etc/init.d");
 		File[] file = d.listFiles();
-		
+
 		if (file.length == 0) {
 
 			cmd.su.runWaitFor("mount -o remount,rw /system");
@@ -332,20 +332,31 @@ public class Initd extends SherlockFragment {
 		}
 
 		// our method to delete the selected script
+		// we try both with busybox & without it to ensure compatibility with
+		// most setups
+		// because anyway if a command fail it has no incidence in this case.
 		private void deleteScript() {
 
 			String toDelete = scripts[pos];
 			Log.v("Script to Delete :", " " + toDelete);
 			CMDProcessor cmd = new CMDProcessor();
 			cmd.su.runWaitFor("busybox mount -o remount,rw /system");
+			cmd.su.runWaitFor("mount -o remount,rw /system");
 			cmd.su.runWaitFor("rm -f /system/etc/init.d/" + toDelete);
+			cmd.su.runWaitFor("busybox rm -f /system/etc/initd/" + toDelete);
+			cmd.su.runWaitFor("mount -o remount,ro /system");
 			cmd.su.runWaitFor("busybox mount -o remount,ro /system");
 
 			if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN)
 				animateDelete();
+			else {
+				v.setAlpha(1);
+				generateList();
+				adjustListViewHeight(listview);
+			}
 		}
 
-		@TargetApi(Build.VERSION_CODES.JELLY_BEAN)
+		
 		private void animateDelete() {
 
 			v.animate().setDuration(2000).alpha(0)
