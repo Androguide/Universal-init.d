@@ -29,6 +29,23 @@ This app is a standalone version of the universal init.d support tool included i
 * Find out more about **Pimp My Rom** at : [http://pimpmyrom.org](http://pimpmyrom.org)
 * You can download **Pimp My Rom** for free on [Google Play](https://play.google.com/store/apps/details?id=com.androguide.pimp.my.rom)
 
+License
+-------
+
+    Copyright 2013 Louis Teboul (a.k.a Androguide)
+    
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+    
+    http://www.apache.org/licenses/LICENSE-2.0
+    
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
 ## Screenshots
 
 ![Wireframe Galay nexus 1](http://168.144.134.166/screenshots/framed-initd1.jpg)![Wireframe Galay nexus 2](http://168.144.134.166/screenshots/framed-initd2.jpg)![Wireframe Galay nexus 3](http://168.144.134.166/screenshots/framed_initd3.jpg)![Wireframe Nexus 7 - 1](http://168.144.134.166/screenshots/framed-initd4.jpg)![Wireframe Nexus 7 - 2](http://168.144.134.166/screenshots/framed-initd5.jpg)![Wireframe Nexus 7 - 3](http://168.144.134.166/screenshots/framed-initd6.jpg)
