@@ -341,12 +341,9 @@ public class Initd extends SherlockFragment {
 			Log.v("Script to Delete :", " " + toDelete);
 			CMDProcessor cmd = new CMDProcessor();
 			cmd.su.runWaitFor("busybox mount -o remount,rw /system");
-			cmd.su.runWaitFor("mount "ext3", "EMMC" -o remount,rw /system");
 			cmd.su.runWaitFor("mount -o remount,rw /system");
-			cmd.su.runWaitFor("rm "ext3", "EMMC"-f /system/etc/init.d/" + toDelete);
 			cmd.su.runWaitFor("rm -f /system/etc/init.d/" + toDelete);
 			cmd.su.runWaitFor("busybox rm -f /system/etc/initd/" + toDelete);
-			cmd.su.runWaitFor("mount "ext3", "EMMC" -o remount,ro /system");
 			cmd.su.runWaitFor("mount -o remount,ro /system");
 			cmd.su.runWaitFor("busybox mount -o remount,ro /system");
 
