@@ -280,11 +280,11 @@ public class Initd extends SherlockFragment {
 
 		if (result == 1) {
 			testValue.setText(getString(R.string.test_positive));
-			testValue.setTextColor(getResources().getColor(R.color.test_green));
+			testValue.setTextColor(getResources().getColor(R.color.test_red));
 
 		} else if (result == 2) {
 			testValue.setText(getString(R.string.test_negative));
-			testValue.setTextColor(getResources().getColor(R.color.test_red));
+			testValue.setTextColor(getResources().getColor(R.color.test_green));
 
 		} else if (result == 0) {
 			testValue.setText(getString(R.string.test_not_started));

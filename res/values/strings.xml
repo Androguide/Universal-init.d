@@ -13,8 +13,8 @@
 	<string name="already_initd">Test if you already have init.d support</string>
 	<string name="test">Test</string>
 	<string name="test_not_started">Test Not Started</string>
-	<string name="test_negative">Your Kernel Does Not Have init.d Support</string>
-	<string name="test_positive">Your Kernel Has init.d Support</string>
+	<string name="test_negative">Perfect! Your Kernel Does Not Have init.d Support.</string>
+	<string name="test_positive">Your Kernel Has init.d Support, this app is useless for you!</string>
 	<string name="test_reboot_required">Reboot Required</string>
 	<string name="turn_switch_off">Please Turn the Switch Off First!</string>
 	<string name="test_initd">To find out if your kernel has init.d support already built-in, turn off the switch at the top of this page, tap the button below and reboot, then come back here to find the answer.</string>
