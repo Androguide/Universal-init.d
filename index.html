@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
+    <title>Universal-init.d by Androguide</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>Universal-init.d</h1>
+        <h2>A simple Android application which emulates the behavior of the init.d kernel mechanism (automatic execution of the scripts contained within the /system/etc/init.d folder at each boot)</h2>
+
+        <section id="downloads">
+          <a href="https://github.com/Androguide/Universal-init.d/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/Androguide/Universal-init.d/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/Androguide/Universal-init.d" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1>
+<a name="universal-initd" class="anchor" href="#universal-initd"><span class="octicon octicon-link"></span></a>Universal-init.d</h1>
+
+<h2>
+<a name="a-simple-android-application-which-emulates-the-behavior-of-the-initd-kernel-mechanism" class="anchor" href="#a-simple-android-application-which-emulates-the-behavior-of-the-initd-kernel-mechanism"><span class="octicon octicon-link"></span></a>A simple Android application which emulates the behavior of the init.d kernel mechanism</h2>
+
+<p><strong>(automatic execution of the scripts contained within the /system/etc/init.d folder at each boot)</strong></p>
+
+<p>What makes this method really universal is that everything happens on the app side, no system files modifications are required whatsoever. The tool basically emulates the behavior of the init.d kernel mechanism : it will detect whenever the device is rebooted and execute the scripts located in /system/etc/init.d.</p>
+
+<p>With this new init.d support granting mechanism comes a new kernel-sided init.d support detection mechanism, so that your int.d scripts don't get executed twice, which would only make for a longer boot time.
+Basically, when you run the test, it will generate a little init.d script which creates a file on your sdcard. Then, after you rebooted, it will check if the file that the generated script creates has indeed been created in order to determine if your kernel already has init.d support built-in. If the file was created, it does. If not, it doesn't, as simple as that.</p>
+
+<p>An additionnal functionnality to this tool is the ability to manage, edit, delete &amp; run your init.d scripts with the touch of a button.</p>
+
+<p><strong>Download on Google Play : <a href="https://play.google.com/store/apps/details?id=com.androguide.universal.init.d">https://play.google.com/store/apps/details?id=com.androguide.universal.init.d</a></strong></p>
+
+<h2>
+<a name="dependencies" class="anchor" href="#dependencies"><span class="octicon octicon-link"></span></a>Dependencies</h2>
+
+<p>This project depends on the following open source libraries :</p>
+
+<ul>
+<li>
+<strong><a href="http://actionbarsherlock.com">ActionBarSherlock</a></strong> by Jake Wharton</li>
+<li>
+<strong><a href="http://nineoldandroids.com">NineOldAndroids</a></strong> by Jake Wharton</li>
+<li>
+<strong><a href="https://github.com/jfeinstein10/JazzyViewPager">JazzyViewPager</a></strong> by Jeremy Feinstein</li>
+</ul><h2>
+<a name="contribute" class="anchor" href="#contribute"><span class="octicon octicon-link"></span></a>Contribute</h2>
+
+<p>Clone the repo, make your changes then create a pull request. If your commit is accepted it will probably be merged in a future build of Pimp My Rom.</p>
+
+<h2>
+<a name="background" class="anchor" href="#background"><span class="octicon octicon-link"></span></a>Background</h2>
+
+<p>This app is a standalone version of the universal init.d support tool included in Pimp My Rom from beta 1.0 onwards.</p>
+
+<ul>
+<li>Find out more about <strong>Pimp My Rom</strong> at : <a href="http://pimpmyrom.org">http://pimpmyrom.org</a>
+</li>
+<li>You can download <strong>Pimp My Rom</strong> for free on <a href="https://play.google.com/store/apps/details?id=com.androguide.pimp.my.rom">Google Play</a>
+</li>
+</ul><h2>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
+
+<pre><code>Copyright 2013 Louis Teboul (a.k.a Androguide)
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+</code></pre>
+
+<h2>
+<a name="screenshots" class="anchor" href="#screenshots"><span class="octicon octicon-link"></span></a>Screenshots</h2>
+
+<p><img src="http://168.144.134.166/screenshots/framed-initd1.jpg" alt="Wireframe Galay nexus 1"><img src="http://168.144.134.166/screenshots/framed-initd2.jpg" alt="Wireframe Galay nexus 2"><img src="http://168.144.134.166/screenshots/framed_initd3.jpg" alt="Wireframe Galay nexus 3"><img src="http://168.144.134.166/screenshots/framed-initd4.jpg" alt="Wireframe Nexus 7 - 1"><img src="http://168.144.134.166/screenshots/framed-initd5.jpg" alt="Wireframe Nexus 7 - 2"><img src="http://168.144.134.166/screenshots/framed-initd6.jpg" alt="Wireframe Nexus 7 - 3"></p>
+      </section>
+    </div>
+
+    
+  </body>
+</html>
