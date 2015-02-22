@@ -129,9 +129,14 @@ public class Initd extends SherlockFragment {
 			cmd.su.runWaitFor("chmod 755 /system/etc/init.d/found");
 			cmd.su.runWaitFor("mount -o remount,ro /system");
 			cmd.su.runWaitFor("mount -o remount,ro /system");
+		} else if (!dir.canRead()) {
+
+			cmd.su.runWaitFor("mount -o remount,rw /system");
+			cmd.su.runWaitFor("chmod 755 /system/etc/init.d");
+			cmd.su.runWaitFor("mount -o remount,ro /system");
 		}
 
-		File d = new File("/system/etc/init.d");
+		File d = new File("/system/etc/init.d");		
 		File[] file = d.listFiles();
 
 		if (file.length == 0) {
